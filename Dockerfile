@@ -20,4 +20,4 @@ RUN apk -U upgrade && apk add --no-cache dumb-init ca-certificates && chmod +x /
 
 EXPOSE ${PORT}
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--", "./app"]
